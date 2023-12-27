@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+main {
+  position: relative;
+}
+
+.sm-none {
+  display: none;
+}
+
+#map {
+  position: static;
+  z-index: 1;
+  height: 520px;
+}
+
+#content-wrapper {
+  position: absolute;
+
+  width: 85%;
+  left: 50%;
+  top: 3%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#content-wrapper h1 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+form {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-control input {
+  width: 90%;
+  padding: 18px 22px;
+  border-radius: 15px 0px 0px 15px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+
+.btn-submit {
+  background-color: black;
+  padding: 20px 22px;
+  outline: none;
+  border: none;
+  border-radius: 0 15px 15px 0px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  opacity: 0.6;
+}
+
+.info__wrapper {
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.info__item {
+  text-align: center;
+}
+
+.info__item span {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  color: hsl(0, 0%, 59%);
+  letter-spacing: 2px;
+}
+
+.info__item p {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 376px) {
+  main > img {
+    width: 100%;
+    min-height: 300px;
+  }
+  .d-block {
+    display: block;
+  }
+
+  .lg-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #map {
+    height: calc(100vh - (300px + 13px));
+  }
+  form {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #content-wrapper {
+    top: 5%;
+  }
+
+  form {
+    width: 60%;
+    margin-bottom: 47px;
+  }
+
+  .info__wrapper {
+    flex-direction: row;
+    padding: 40px 32px;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+  }
+
+  .info__item {
+    text-align: left;
+    position: relative;
+    max-width: 20%;
+  }
+
+  .info__item p {
+    font-size: 24px;
+  }
+
+  .info__item:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 60px;
+    max-height: 90px;
+    top: 10px;
+    left: -36px;
+    background-color: hsl(0, 0%, 86%);
+  }
+}
